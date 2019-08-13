@@ -1,3 +1,4 @@
+
     var tpoAppObject = null;
     var appraisalCompany = "";
 // Instantiate objects on window load (one-time event handling).
