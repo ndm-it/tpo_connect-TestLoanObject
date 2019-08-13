@@ -1,4 +1,3 @@
-<script src="https://cdn.elliemae.io/elliemae/core/ssf/1.0/elli.ssf.guest-with-polyfill.js"></script>
     var tpoAppObject = null;
     var appraisalCompany = "";
 // Instantiate objects on window load (one-time event handling).
