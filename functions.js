@@ -54,84 +54,6 @@ function GetUserData() {
     });
     }
 
-
-    function myFunction(appraisalName) {
-        if (appraisalName) {
-            if (appraisalName.includes('Act Appraisal')) {
-                window.open('https://www.actappraisal.com/#act-login', '_blank');
-            }
-            else if (appraisalName.includes('AMC Appraisal Management Company, LLC')) {
-                window.open('https://amc.myvalutrac.com/auth/login.aspx', '_blank');
-            }
-            else if (appraisalName.includes('Appraisal Links')) {
-                window.open('https://appraisallinks.appraisalscope.com', '_blank');
-            }
-            else if (appraisalName.includes('Appraisal Valet, Inc.')) {
-                window.open('http://www.appraisalvalet.net', '_blank');
-            }
-            else if (appraisalName.includes('AppraiserVendor.com, LLC')) {
-                window.open('https://www.appraiservendor.com/', '_blank');
-            }
-            else if (appraisalName.includes('Axis Appraisal Management Solutions')) {
-                window.open('https://www.axis-amc.com', '_blank');
-            }
-            else if (appraisalName.includes('Caliber AMC')) {
-                window.open('http://caliberamc.com', '_blank');
-            }
-            else if (appraisalName.includes('Class Appraisal')) {
-                window.open('https://www.classvaluation.com', '_blank');
-            }
-            else if (appraisalName.includes('Class Valuation')) {
-                window.open('https://www.classvaluation.com', '_blank');
-            }
-            else if (appraisalName.includes('Clear Capital Valuations')) {
-                window.open('https://www.clearcapital.com', '_blank');
-            }
-            else if (appraisalName.includes('Effort Appraisal Group')) {
-                window.open('http://www.effortappraisalmanagement.com/', '_blank');
-            }
-            else if (appraisalName.includes('Equity Solutions USA, Inc')) {
-                window.open('https://esusa.appraisalscope.com/', '_blank');
-            }
-            else if (appraisalName.includes('First Choice Appraisal Management Inc')) {
-                window.open('http://www.firstchoiceamc.com', '_blank');
-            }
-            else if (appraisalName.includes('Golden State AMC')) {
-                window.open('https://goldstate.appraisalscope.com', '_blank');
-            }
-            else if (appraisalName.includes('Got Appraisals')) {
-                window.open('https://www.gotappraisals.com', '_blank');
-            }
-            else if (appraisalName.includes('HVCC Appraisal Ordering')) {
-                window.open('http://www.hvccappraisalordering.com', '_blank');
-            }
-            else if (appraisalName.includes('Land Gorilla')) {
-                window.open('http://landgorilla.com', '_blank');
-            }
-            else if (appraisalName.includes('LCI Appraisal Management')) {
-                window.open('http://www.lci-network.com', '_blank');
-            }
-            else if (appraisalName.includes('Lender\'s Valuation Services')) {
-                window.open('http://www.lvs-amc.com', '_blank');
-            }
-            else if (appraisalName.includes('Nationwide Property & Appraisal Services')) {
-                window.open('https://onestopappraisals.appraisalscope.com', '_blank');
-            }
-            else if (appraisalName.includes('Priority Appraisal USA')) {
-                window.open('', '_blank');
-            }
-            else if (appraisalName.includes('Settlement One Valuation (Port Retention Only)')) {
-                window.open('', '_blank');
-            }
-            else if (appraisalName.includes('So Cal Direct')) {
-                window.open('https://socaldirect.myvalutrac.com', '_blank');
-            }
-        }
-        else {
-            console.log('No appraisal company assigned');
-        }
-    }
-
 function GetLoanData() {
   // Get loan summary and console log only.
   tpoAppObject.getLoanSummary().then(function (loanSummary) {
@@ -161,16 +83,9 @@ function GetLoanData() {
       $('#appriaser').html(loanData.UnderwriterSummary.OriginalAppraiser);
       $('#processing').hide();
         $('#results').show();
-        myFunction(appraisalCompany);
-
     }
   })
     .catch(function (err) {
       console.log('Fetch Error :-S', err);
     });
-}
-
-function buttonFunction()
-{
-  myFunction(appraisalCompany);
 }
