@@ -21,9 +21,23 @@ function displayEntireLoan() {
    .catch(function (err) {
      console.log('Fetch Error :-S', err);
    });
+
+   try {
+     let loan = await elli.script.getObject("loan");
+   }
+   catch {
+     console.log('Could not retrieve loan getObject object');
+   }
+   try {
+     let loanObjectt = tpoAppObject.getObject("loan");
+     console.log(loanObjectt);
+   }
+   catch {
+     console.log("Could not retrieve tpoAppObject LoanObjectt");
+   }
  // Retrieve the entire encompass loan using another await
  //let completeLoanObjectFromHost = await loan.all();
- console.log('The entire loan object looks like: ' + completeLoanObjectFromHost);
+ //console.log('The entire loan object looks like: ' + completeLoanObjectFromHost);
 }
 // async function onLoanOpened(proxy, loanData) {
 //   console.log('before getting loan object');
