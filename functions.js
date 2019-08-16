@@ -25,14 +25,14 @@ async function displayEntireLoan() {
    try {
      let loan = await elli.script.getObject("loan");
    }
-   catch {
+   catch(err) {
      console.log('Could not retrieve loan getObject object');
    }
    try {
      let loanObjectt = tpoAppObject.getObject("loan");
      console.log(loanObjectt);
    }
-   catch {
+   catch(err) {
      console.log("Could not retrieve tpoAppObject LoanObjectt");
    }
  // Retrieve the entire encompass loan using another await
