@@ -21,13 +21,6 @@ async function displayEntireLoan() {
    .catch(function (err) {
      console.log('Fetch Error :-S', err);
    });
-
-   try {
-     let loan = await elli.script.getObject("loan");
-   }
-   catch(err) {
-     console.log('Could not retrieve loan getObject object');
-   }
    try {
      let loanObjectt = tpoAppObject.getObject("loan");
      console.log(loanObjectt);
