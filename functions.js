@@ -26,7 +26,7 @@ async function displayEntireLoan() {
      console.log(loanObjectt);
    }
    catch(err) {
-     console.log("Could not retrieve tpoAppObject LoanObjectt");
+     console.log("Could not retrieve tpoAppObject LoanObjectt" + err);
    }
  // Retrieve the entire encompass loan using another await
  //let completeLoanObjectFromHost = await loan.all();
