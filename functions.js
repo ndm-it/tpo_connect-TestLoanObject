@@ -10,7 +10,7 @@ window.addEventListener("load", function () {
 });
 
 elli.script.subscribe('tpoApplication', 'loanOpen', displayEntireLoan);
-function displayEntireLoan() {
+async function displayEntireLoan() {
 
 //async function displayEntireLoan() {
  // Retrieve the loan object by awaiting the result of the getObject() call
