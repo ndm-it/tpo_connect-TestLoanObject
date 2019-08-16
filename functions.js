@@ -5,6 +5,7 @@ window.addEventListener("load", function () {
   elli.script.getObject("tpoApplication").then(function (tpoAppObject) {
     this.tpoAppObject = tpoAppObject;
     console.log('referenced tpoAppObject');
+    console.log(tpoAppObject.getUserData());
     //displayEntireLoan();
   });
 });
