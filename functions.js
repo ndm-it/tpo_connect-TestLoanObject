@@ -81,8 +81,7 @@
             $('#loanGUID').html(loanData.EncompassId);
             //console.log('UnderWriterSummary ===',loanData.UnderwriterSummary);
           $('#propertyStreet').html(loanData.Property.StreetAddress);
-          $('#propertyCi
-          ty').html(loanData.Property.City);
+          $('#propertyCity').html(loanData.Property.City);
           $('#propertyState').html(loanData.Property.State);
           $('#propertyZip').html(loanData.Property.PostalCode);
           $('#appriaser').html(loanData.UnderwriterSummary.OriginalAppraiser);
