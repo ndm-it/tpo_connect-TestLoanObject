@@ -13,7 +13,7 @@
 		    // This call will only succeed on page load event if user already has opened a loan in TPOC.
 		    // Use the onLoanOpened event (as shown below) to get/refresh loan data when user opens a loan.
           GetLoanData();
-          GetAuthData();
+          //GetAuthData();
       });
     });
     // Subscribe to loanOpen event to refresh context when loan context changes (context event handling).
@@ -70,6 +70,7 @@
       tpoAppObject.getLoanData().then(function (loanData) {
           console.log('Loan Data ===', loanData);
           appraisalCompany = loanData.UnderwriterSummary.OriginalAppraiser;
+	      Console.log(loanData.FundingFeeList);
         if (typeof loanData.LoanNumber === 'undefined') {
           $('#loanNotAvailable').show();
           $('#loanAvailable').hide();
