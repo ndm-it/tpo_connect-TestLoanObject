@@ -70,7 +70,7 @@
       tpoAppObject.getLoanData().then(function (loanData) {
           console.log('Loan Data ===', loanData);
           appraisalCompany = loanData.UnderwriterSummary.OriginalAppraiser;
-	      Console.log(loanData.FundingFeeList);
+	      console.log(loanData.FundingFeeList);
         if (typeof loanData.LoanNumber === 'undefined') {
           $('#loanNotAvailable').show();
           $('#loanAvailable').hide();
