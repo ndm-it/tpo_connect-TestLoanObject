@@ -72,9 +72,12 @@
           appraisalCompany = loanData.UnderwriterSummary.OriginalAppraiser;
 	      var fundingFeeList = loanData.FundingFeeList;
 	      console.log(fundingFeeList);
+	      //Finding 801a or field 1621
 	      if(fundingFeeList.includes("801a."))
 	      {
 		      var begIndex = fundingFeeList.indexOf("801a.");
+		      var lastIndex = fundingFeeList.length-1;
+		      fundingFeeList = fundingFeeList.substring(begIndex,lastIndex);
 		      var endIndex = 0;
 		      if(fundingFeeList.indexOf("\n") == -1){
 			      console.log("No return character");
@@ -85,6 +88,23 @@
 			      console.log(substring);
 		      }
 	      }
+	      
+	      if(fundingFeeList.includes("1102h."))
+	      {
+		      var begIndex = fundingFeeList.indexOf("1102h.");
+		      var lastIndex = fundingFeeList.length-1;
+		      fundingFeeList = fundingFeeList.substring(begIndex,lastIndex);
+		      var endIndex = 0;
+		      if(fundingFeeList.indexOf("\n") == -1){
+			      console.log("No return character");
+		      }
+		      else {
+			      endIndex = fundingFeeList.indexOf("\n");
+			      var substring = fundingFeeList.substring(begIndex,endIndex);
+			      console.log(substring);
+		      }
+	      }
+	      
 		  
         if (typeof loanData.LoanNumber === 'undefined') {
           $('#loanNotAvailable').show();
