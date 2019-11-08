@@ -100,8 +100,8 @@ if(fundingFeeList.includes("1102h."))
   }
   else {
     endIndex = otherShortenedList.indexOf("\n");
-    var substring = otherShortenedList.substring(0,endIndex);
-    console.log(substring.substring(lastIndexOf("$"),endIndex));
+    var lastSubstring = otherShortenedList.substring(0,endIndex);
+    console.log(lastSubstring.substring(lastSubstring.lastIndexOf("$"),endIndex));
   }
 }
 
