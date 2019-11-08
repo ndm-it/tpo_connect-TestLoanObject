@@ -71,23 +71,23 @@ tpoAppObject.getLoanData().then(function (loanData) {
   console.log('Loan Data ===', loanData);
   appraisalCompany = loanData.UnderwriterSummary.OriginalAppraiser;
 var fundingFeeList = loanData.FundingFeeList;
-console.log(fundingFeeList);
+//console.log(fundingFeeList);
 //Finding 801a or field 1621
-//if(fundingFeeList.includes("801a."))
-//{
-//  var begIndex = fundingFeeList.indexOf("801a.");
-//  var lastIndex = fundingFeeList.length-1;
-//  var shortenedList = fundingFeeList.substring(begIndex,lastIndex);
-//  var endIndex = 0;
-//  if(shortenedList.indexOf("\n") == -1){
-//    console.log("No return character");
-//  }
-//  else {
-//    endIndex = shortenedList.indexOf("\n");
-//    var substring = shortenedList.substring(0,endIndex);
-//    console.log(substring);
-//  }
-//}
+if(fundingFeeList.includes("801a."))
+{
+  var begIndex = fundingFeeList.indexOf("801a.");
+  var lastIndex = fundingFeeList.length-1;
+  var shortenedList = fundingFeeList.substring(begIndex,lastIndex);
+  var endIndex = 0;
+  if(shortenedList.indexOf("\n") == -1){
+    console.log("No return character");
+  }
+  else {
+    endIndex = shortenedList.indexOf("\n");
+    var substring = shortenedList.substring(0,endIndex);
+    console.log(substring);
+  }
+}
 
 if(fundingFeeList.includes("1102h."))
 {
