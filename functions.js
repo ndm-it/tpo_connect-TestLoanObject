@@ -72,7 +72,7 @@ tpoAppObject.getLoanData().then(function (loanData) {
   appraisalCompany = loanData.UnderwriterSummary.OriginalAppraiser;
 var fundingFeeList = loanData.FundingFeeList;
 //console.log(fundingFeeList);
-//Finding 801a or field 1621
+//Finding 801a or field 454
 if(fundingFeeList.includes("801a."))
 {
   var begIndex = fundingFeeList.indexOf("801a.");
@@ -89,9 +89,10 @@ if(fundingFeeList.includes("801a."))
   }
 }
 
-if(fundingFeeList.includes("1102h."))
+  //Finding 801c or Field 1621
+if(fundingFeeList.includes("801c."))
 {
-  var begIndex = fundingFeeList.indexOf("1102h.");
+  var begIndex = fundingFeeList.indexOf("801c.");
   var lastIndex = fundingFeeList.length-1;
   var shortString = fundingFeeList.substring(begIndex,lastIndex);
   var endIndex = 0;
