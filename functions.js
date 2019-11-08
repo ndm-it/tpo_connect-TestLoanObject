@@ -94,7 +94,6 @@ if(fundingFeeList.includes("1102h."))
   var begIndex = fundingFeeList.indexOf("1102h.");
   var lastIndex = fundingFeeList.length-1;
   var otherShortenedList = fundingFeeList.substring(begIndex,lastIndex);
-  console.log(otherShortenedList);
   var endIndex = 0;
   if(otherShortenedList.indexOf("\n") == -1){
     console.log("No return character");
@@ -102,7 +101,7 @@ if(fundingFeeList.includes("1102h."))
   else {
     endIndex = otherShortenedList.indexOf("\n");
     var substring = otherShortenedList.substring(0,endIndex);
-    console.log(substring);
+    console.log(substring.substring(lastIndexOf("$"),endIndex));
   }
 }
 
