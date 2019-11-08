@@ -84,8 +84,9 @@ if(fundingFeeList.includes("801a."))
   }
   else {
     endIndex = shortenedList.indexOf("\n");
-    var substring = shortenedList.substring(0,endIndex);
-    console.log(substring);
+    var lastSubstring = shortenedList.substring(0,endIndex);
+        console.log(lastSubstring.substring(lastSubstring.lastIndexOf("$")+1,endIndex));
+
   }
 }
 
