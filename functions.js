@@ -70,7 +70,22 @@
       tpoAppObject.getLoanData().then(function (loanData) {
           console.log('Loan Data ===', loanData);
           appraisalCompany = loanData.UnderwriterSummary.OriginalAppraiser;
-	      console.log(loanData.FundingFeeList);
+	      var fundingFeeList = loanData.FundingFeeList;
+	      console.log(fundingFeeList);
+	      if(fundingFeeList.includes("801a."))
+	      {
+		      var begIndex = fundingFeeList.indexOf("801a.");
+		      var endIndex = 0;
+		      if(fundingFeeList.indexOf("\n") == -1){
+			      console.log("No return character");
+		      }
+		      else {
+			      endIndex = fundingFeeList.indexOf("\n");
+			      var substring = fundingFeeList.substring(begIndex,endIndex);
+			      console.log(substring);
+		      }
+	      }
+		  
         if (typeof loanData.LoanNumber === 'undefined') {
           $('#loanNotAvailable').show();
           $('#loanAvailable').hide();
