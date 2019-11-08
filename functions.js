@@ -84,7 +84,7 @@ console.log(fundingFeeList);
 //  }
 //  else {
 //    endIndex = shortenedList.indexOf("\n");
-//    var substring = shortenedList.substring(begIndex,endIndex);
+//    var substring = shortenedList.substring(0,endIndex);
 //    console.log(substring);
 //  }
 //}
@@ -93,15 +93,15 @@ if(fundingFeeList.includes("1102h."))
 {
   var begIndex = fundingFeeList.indexOf("1102h.");
   var lastIndex = fundingFeeList.length-1;
-  var otherShortenedList = fundingFeeList.substring(begIndex,lastIndex);
+  var shortString = fundingFeeList.substring(begIndex,lastIndex);
   var endIndex = 0;
-  if(otherShortenedList.indexOf("\n") == -1){
+  if(shortString.indexOf("\n") == -1){
     console.log("No return character");
   }
   else {
-    endIndex = otherShortenedList.indexOf("\n");
-    var lastSubstring = otherShortenedList.substring(0,endIndex);
-    console.log(lastSubstring.substring(lastSubstring.lastIndexOf("$"),endIndex));
+    endIndex = shortString.indexOf("\n");
+    var lastSubstring = shortString.substring(0,endIndex);
+    console.log(lastSubstring.substring(lastSubstring.lastIndexOf("$")+1,endIndex));
   }
 }
 
