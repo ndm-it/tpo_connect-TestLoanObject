@@ -106,6 +106,24 @@ if(fundingFeeList.includes("801c."))
     console.log(lastSubstring.substring(lastSubstring.lastIndexOf("$")+1,endIndex));
   }
 }
+  
+    //Finding 813 or Field 370
+if(fundingFeeList.includes("813."))
+{
+  var begIndex = fundingFeeList.indexOf("813.");
+  var lastIndex = fundingFeeList.length-1;
+  var shortString = fundingFeeList.substring(begIndex,lastIndex);
+  var endIndex = 0;
+  if(shortString.indexOf("\n") == -1){
+    console.log("No return character");
+  }
+  else {
+    endIndex = shortString.indexOf("\n");
+    var lastSubstring = shortString.substring(0,endIndex);
+    console.log(lastSubstring.substring(lastSubstring.lastIndexOf("$")+1,endIndex));
+  }
+}
+  
 
 
 if (typeof loanData.LoanNumber === 'undefined') {
