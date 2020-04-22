@@ -23,6 +23,7 @@ function GetLoanData() {
 
 tpoAppObject.getLoanData().then(function (loanData) {
   console.log('Loan Data ===', loanData);
+  console.log('Inside get loan data function');
 })
 .catch(function (err) {
   console.log('Fetch Error :-S', err);
