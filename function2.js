@@ -23,6 +23,11 @@ console.log('loanOpen => loanData ===', loanData);
 }
 
 function GetLoanData() {
+
 tpoAppObject.getLoanData().then(function (loanData) {
-console.log('Loan Data ===', loanData);
+  console.log('Loan Data ===', loanData);
+})
+.catch(function (err) {
+  console.log('Fetch Error :-S', err);
+});
 }
