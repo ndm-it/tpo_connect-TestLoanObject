@@ -12,15 +12,12 @@ this.tpoAppObject = tpoAppObject;
 });
 });
 
-elli.script.subscribe('tpoApplication', 'loanOpen', onLoanOpened);
-function onLoanOpened(proxy, loanData) {
-$("div#processing").show();
-GetLoanData();
-$("div#loanAvailable").show();
-$("div#loanNotAvailable").hide();
-this.loanData = loanData;
-console.log('loanOpen => loanData ===', loanData);
-}
+//elli.script.subscribe('tpoApplication', 'loanOpen', onLoanOpened);
+//function onLoanOpened(proxy, loanData) {
+//GetLoanData();
+//this.loanData = loanData;
+//console.log('loanOpen => loanData ===', loanData);
+//}
 
 function GetLoanData() {
 
